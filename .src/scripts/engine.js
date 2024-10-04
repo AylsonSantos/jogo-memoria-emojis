@@ -36,9 +36,9 @@ const emojisComida = [
 ];
 let openCards = [];
 
-let shuffleEmojis = emojis.sort(() => (Math.random() > 0.5 ? 2: -1));
+let shuffleEmojis = emojisComida.sort(() => (Math.random() > 0.5 ? 2: -1));
 
-for(let i = 0; i < emojis.length; i++) {
+for(let i = 0; i < emojisComida.length; i++) {
     let box = document.createElement("div");
     box.className = "item";
     box.innerHTML = shuffleEmojis[i];
@@ -68,7 +68,7 @@ function checkMatch() {
 
   openCards = [];
 
-  if (document.querySelectorAll(".boxMatch").length === emojis.length) {
+  if (document.querySelectorAll(".boxMatch").length === emojisComida.length) {
     alert("Você Venceu ! Parabéns...");
   }
 }
